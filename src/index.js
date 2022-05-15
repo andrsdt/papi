@@ -10,6 +10,9 @@ import { generatePassword } from "./utils/passwordGenerator";
 let app = express();
 app.server = http.createServer(app);
 
+// For making the rate limiter work with heroku's load balancer
+app.set("trust proxy", 1);
+
 // logger
 app.use(morgan("dev"));
 
