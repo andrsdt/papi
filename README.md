@@ -1,57 +1,7 @@
-Express & ES6 REST API Boilerplate
-==================================
+![papi](https://user-images.githubusercontent.com/53608787/168490641-51372daa-691d-44b7-9665-98d09375b519.svg)
 
-This is a straightforward boilerplate for building REST APIs with ES6 and Express.
+Papi (short for Password API) is a simple API developed with Express that generates passwords of the pattern `^[a-zA-Z0-9]+$` using the [Fisher-Yates shuffle algorithm](https://en.wikipedia.org/wiki/Fisher–Yates_shuffle). The current version is available on [Heroku](https://papi-generator.herokuapp.com/api) for —responsible— public use.
 
-- ES6 support via [babel](https://babeljs.io)
-- REST resources as middleware via [resource-router-middleware](https://github.com/developit/resource-router-middleware)
-- CORS support via [cors](https://github.com/troygoode/node-cors)
-- Body Parsing via [body-parser](https://github.com/expressjs/body-parser)
+The single endpoint available is `/api`, with an optional query parameter `length` for specifying the length of the desired password.
 
-> Tip: If you are using [Mongoose](https://github.com/Automattic/mongoose), you can automatically expose your Models as REST resources using [restful-mongoose](https://git.io/restful-mongoose).
-
-
-
-Getting Started
----------------
-
-```sh
-# clone it
-git clone git@github.com:developit/express-es6-rest-api.git
-cd express-es6-rest-api
-
-# Make it your own
-rm -rf .git && git init && npm init
-
-# Install dependencies
-npm install
-
-# Start development live-reload server
-PORT=8080 npm run dev
-
-# Start production server:
-PORT=8080 npm start
-```
-Docker Support
-------
-```sh
-cd express-es6-rest-api
-
-# Build your docker
-docker build -t es6/api-service .
-#            ^      ^           ^
-#          tag  tag name      Dockerfile location
-
-# run your docker
-docker run -p 8080:8080 es6/api-service
-#                 ^            ^
-#          bind the port    container tag
-#          to your host
-#          machine port   
-
-```
-
-License
--------
-
-MIT
+![example](https://user-images.githubusercontent.com/53608787/168491148-871fb269-d736-43af-b664-a3050705e49a.svg)
