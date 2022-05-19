@@ -1,4 +1,4 @@
-![papi](https://user-images.githubusercontent.com/53608787/168490641-51372daa-691d-44b7-9665-98d09375b519.svg)
+![papi](https://user-images.githubusercontent.com/53608787/169408115-ba7b3d6d-41fa-4cb4-bd02-799e16345e59.svg)
 
 Papi (short for Password API) is a simple API developed with Express that generates passwords of the pattern `^[a-zA-Z0-9]+$` using the [Fisher-Yates shuffle algorithm](https://en.wikipedia.org/wiki/Fisher–Yates_shuffle). The current version is available on [Heroku](https://papi-generator.herokuapp.com/api) for —responsible— public use. There is a rate limit of **100 requests per hour**.
 
